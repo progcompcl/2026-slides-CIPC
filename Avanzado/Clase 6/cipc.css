@@ -1,0 +1,167 @@
+ /* @theme cipc */
+
+/* Import default Marp theme */
+@import 'default';
+
+
+/* ==========================================
+   COLORS
+   ========================================== */
+
+:root{
+    --primary-color: #15214c;
+    --secondary-color: #e27d00;
+    --tertiary-color: #f0ebeb;
+    --text-color: #ffffff;
+    /* --link-color:  */
+}
+
+/* ==========================================
+   TITLE SLIDE STYLING
+   ========================================== */
+
+/* Main title on title slide */
+
+section.title > h1 {
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  text-align: center;
+
+  top: 25%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  
+  padding-bottom: 0.2em;
+  height: auto;
+}
+
+/* ==========================================
+   CONTENT SLIDE STYLING
+   ========================================== */
+
+/* Header bar for content slid
+.titlees (excludes title slide) */
+section:not(.title) h1:nth-of-type(1) {
+  background: var(--primary-color);
+  color: var(--text-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-size: 1.3em;
+  z-index: 1000;
+  gap: 20px;
+}
+
+/* Logo icon before header text */
+section:not(.title) h1:nth-of-type(1)::before {
+  content: "";
+  display: inline-block;
+  width: 1.3em;
+  height: 1.8em;
+  background-image: url("https://cipc.progcomp.cl/_astro/logo-dark.CZjMVnQU_Z1PCMg3.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   FOOTER ELEMENTS
+   ========================================== */
+
+/* Left footer section (orange background) */
+header {
+  position: absolute;
+  top: 95%;
+  height: 5%;
+  left: 0%;
+  box-sizing: border-box;
+  width: 50%;
+  background: var(--secondary-color);
+  display: flex;
+  color: var(--text-color);
+  justify-content: right;
+  align-items: center;
+  padding: 3px 5px;
+}
+
+/* Right footer section (dark blue background) */
+footer {
+  position: absolute;
+  top: 95%;
+  height: 5%;
+  left: 50%;
+  box-sizing: border-box;
+  width: 50%;
+  background: var(--primary-color);
+  display: flex;
+  color: var(--text-color);
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 5px;
+}
+
+/* Page numbering (appears after content) */
+section::after {
+  position: absolute;
+  top: 95%;
+  height: 5%;
+  right: 1%;
+  content: attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total);
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+}
+
+
+/* ==========================================
+   Masterkrab ELEMENTS
+   ========================================== */
+
+
+/* Horizontal tables */
+.table-horizontal {
+  background-color: transparent;
+  text-align: center;
+  font-size: 1.15rem;
+}
+
+.table-horizontal th,
+.table-horizontal td{
+  padding: 0.5rem 1rem;
+}
+
+
+
+
+/* Make a layout for two columns */
+.two-columns{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  text-align: justify;
+}
+
+
+/* Author list styling for portrait */
+.author{
+  text-align: center;
+  list-style: none;
+  padding: 0;
+}
+
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
