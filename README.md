@@ -54,8 +54,8 @@ npx @marp-team/marp-cli --server --watch --html --allow-local-files --theme cipc
 ## Compilar todas las clases
 
 ```bash
-# A HTML (no requiere Chrome)
+# A PDF
 for dir in Introducción Inicial/*/ Avanzado/*/; do
-  (cd "$dir" && bash compile.sh html)
+  (cd "$dir" && bash compile.sh)
 done
 ```
